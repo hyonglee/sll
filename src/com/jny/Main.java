@@ -30,7 +30,6 @@ public class Main {
                     simpleLinkedList.insertAtEnd(newNode);
                     break;
                 case 2: //print(); break;
-                    simpleLinkedList.head == null;
 
                     break;
                 case 3: //sort(); break;
