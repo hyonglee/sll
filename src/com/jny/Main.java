@@ -15,15 +15,18 @@ public class Main {
             System.out.print("2. PRINT\n");
             System.out.print("3. SORT\n");
             System.out.print("4. END\n");
-            System.out.print("choice : ");
+            System.out.print("Select : \n");
 
             String menuNum;
             Scanner scanIn = new Scanner(System.in);
             menuNum = scanIn.nextLine();
+            LinkedList sLL ;
+            sLL = new LinkedList();
 
             switch (Integer.parseInt(menuNum)) {
                 case 1:
-                    //insert(); break;
+                    ListNode newNode = new ListNode(1);
+                    sLL.insertAtEnd(newNode);
                     break;
                 case 2: //print(); break;
                     break;
