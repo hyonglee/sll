@@ -17,18 +17,21 @@ public class Main {
             System.out.print("4. END\n");
             System.out.print("Select : \n");
 
-            String menuNum;
             Scanner scanIn = new Scanner(System.in);
-            menuNum = scanIn.nextLine();
-            LinkedList sLL ;
-            sLL = new LinkedList();
+            int menuNum = scanIn.nextInt();
+            LinkedList simpleLinkedList ;
+            simpleLinkedList = new LinkedList();
 
-            switch (Integer.parseInt(menuNum)) {
+            switch (menuNum) {
                 case 1:
-                    ListNode newNode = new ListNode(1);
-                    sLL.insertAtEnd(newNode);
+                    System.out.print("Enter Integer: \n");
+                    int data = scanIn.nextInt();
+                    ListNode newNode = new ListNode(data);
+                    simpleLinkedList.insertAtEnd(newNode);
                     break;
                 case 2: //print(); break;
+                    simpleLinkedList.head == null;
+
                     break;
                 case 3: //sort(); break;
                     break;
