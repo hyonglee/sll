@@ -13,6 +13,8 @@
 
 package com.jny;
 
+import java.util.List;
+
 public class LinkedList {
 	// This class has a default constructor: 
 	public LinkedList() {
@@ -28,6 +30,10 @@ public class LinkedList {
 	// Return the first node in the list 
 	public synchronized ListNode getHead() { 
 		return head; 
+	}
+
+	public synchronized void setHead(ListNode node) {
+		head = node;
 	}
 
 	// Insert a node at the beginning of the list 

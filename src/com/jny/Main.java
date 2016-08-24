@@ -15,12 +15,12 @@ public class Main {
     static void printNode(LinkedList simpleLinkedList){
         ListNode currentNode;
 
-        if(simpleLinkedList.head == null){
+        if(simpleLinkedList.getHead() == null){
             System.out.print("Linked List Empty\n");
             return;
         }
         System.out.print("\n<PRINT>\n");
-        currentNode = simpleLinkedList.head;
+        currentNode = simpleLinkedList.getHead();
         while(currentNode.next != null)
         {
             System.out.print(currentNode.data+" -> ");
@@ -30,6 +30,39 @@ public class Main {
     }
     static void sortNode(LinkedList simpleLinkedList){
 
+        if(simpleLinkedList.getHead() == null){
+            System.out.print("Linked List Empty\n");
+            return;
+        }
+        int count = simpleLinkedList.length();
+        ListNode currentNode;
+        ListNode[] listNodeArray = new ListNode[count];
+        System.out.print("count:"+count+"\n");
+        int i;
+        for(i = 0, currentNode = simpleLinkedList.getHead();currentNode != null; i++, currentNode = currentNode.getNext()){
+            listNodeArray[i] = currentNode;
+        }
+
+        int k,j;
+
+        for(k = 0; k < count; k++)
+        {
+            for(j = k+1; j < count; j++)
+            {
+                if(listNodeArray[k].getData() < listNodeArray[j].getData())
+                {
+                    currentNode = listNodeArray[k];
+                    listNodeArray[k] = listNodeArray[j];
+                    listNodeArray[j] = currentNode;
+                }
+            }
+        }
+        for(simpleLinkedList.setHead(listNodeArray[0]),currentNode = simpleLinkedList.getHead(),i = 1 ; i < count; i++, currentNode = currentNode.getNext()){
+            currentNode.setNext(listNodeArray[i]);
+        }
+        currentNode.setNext(null);
+
+        System.out.print("List Soring Finished\n");
     }
     public static void main(String[] args) throws IOException {
         LinkedList simpleLinkedList ;
