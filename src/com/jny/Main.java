@@ -16,7 +16,7 @@ public class Main {
         ListNode currentNode;
 
         if(simpleLinkedList.head == null){
-            System.out.print("Empty List\n");
+            System.out.print("Linked List Empty\n");
             return;
         }
         System.out.print("\n<PRINT>\n");
